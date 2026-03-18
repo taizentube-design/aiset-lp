@@ -2,10 +2,30 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>OpenClaw導入・セッティング代行 | アイセット</title>
+<title>OpenClaw導入・セッティング代行 | 非エンジニア向け | アイセット</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="OpenClawの導入・セットアップを代行。SOUL設計からチャネル連携まで、非エンジニアの実運用経験をもとにサポート。Mac mini / VPS対応。198,000円（税込）。">
-<meta name="keywords" content="OpenClaw 導入, OpenClaw セットアップ, OpenClaw 導入代行, OpenClaw Mac mini, OpenClaw 使い方, AIエージェント 導入, SOUL設計, OpenClaw 料金">
+<meta name="description" content="OpenClaw（オープンクロー）の導入・セットアップを非エンジニア向けに代行。SOUL設計からチャネル連携まで、実運用経験をもとにMac mini / VPSにセットアップ。社員1人の年間コスト360万円に対し、198,000円で24時間働くAI従業員を導入できます。">
+<meta name="keywords" content="OpenClaw 導入, OpenClaw セットアップ, OpenClaw 導入代行, OpenClaw Mac mini, OpenClaw 使い方, OpenClaw 料金, OpenClaw 設定, AIエージェント 導入, AIエージェント 導入代行, SOUL設計, 自律型AI 導入, OpenClaw VPS, OpenClaw できること, 非エンジニア AIエージェント">
+<!-- OGP -->
+<meta property="og:title" content="OpenClaw導入・セッティング代行 | アイセット">
+<meta property="og:description" content="OpenClawの導入からSOUL設計まで、非エンジニア向けにまるごと代行。社員1人の年間コスト360万円に対し、198,000円で24時間働くAI従業員を導入。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ai-set.jp/openclaw/">
+<meta property="og:image" content="https://ai-set.jp/images_biz/hero.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OpenClaw導入・セッティング代行 | アイセット">
+<meta name="twitter:description" content="OpenClawの導入からSOUL設計まで非エンジニア向けに代行。198,000円で24時間働くAI従業員を導入。">
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DM1KBW3JGG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DM1KBW3JGG');
+</script>
+<!-- GSC -->
+<meta name="google-site-verification" content="NPcHpIL8aIP7sz_ll-o2aV1BKyhR7dKpiNd4DNTSV1Q">
+<link rel="icon" type="image/png" href="../favicon.png">
 <link rel="stylesheet" href="../css_biz/style.css">
 <style>
 :root {
@@ -57,8 +77,19 @@
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   color: rgba(255,255,255,0.65);
   line-height: 2;
-  margin: 0 auto 44px;
-  max-width: 560px;
+  margin: 0 auto 24px;
+  max-width: 600px;
+}
+.hero-badges { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 36px; }
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.78rem;
+  font-weight: bold;
+  padding: 5px 14px;
+  border-radius: 100px;
 }
 .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 36px; }
 .btn-hero-main {
@@ -157,7 +188,7 @@
   line-height: 1.7;
 }
 .chk-list li::before {
-  content: '✓';
+  content: '\2713';
   flex-shrink: 0;
   width: 22px; height: 22px;
   display: flex; align-items: center; justify-content: center;
@@ -177,7 +208,7 @@
   line-height: 1.7;
 }
 .ng-list li::before {
-  content: '✕';
+  content: '\2715';
   flex-shrink: 0;
   width: 22px; height: 22px;
   display: flex; align-items: center; justify-content: center;
@@ -200,7 +231,37 @@
 .price-box .sub-txt { font-size: 0.88rem; color: rgba(255,255,255,0.75); line-height: 1.9; }
 .price-box .note { font-size: 0.8rem; color: rgba(255,255,255,0.5); border-top: 1px solid rgba(255,255,255,0.15); margin-top: 16px; padding-top: 16px; }
 
+.cost-compare { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; margin: 1.5rem 0; }
+.cost-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.cost-card.highlight {
+  background: rgba(58,123,255,0.12);
+  border-color: rgba(58,123,255,0.4);
+}
+.cost-card .cost-label { font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-bottom: 6px; }
+.cost-card .cost-num { font-size: 1.5rem; font-weight: bold; color: #fff; margin-bottom: 4px; }
+.cost-card.highlight .cost-num { color: #7aa4ff; }
+.cost-card .cost-detail { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
+.cost-arrow { font-size: 1.6rem; color: rgba(255,255,255,0.3); text-align: center; }
+
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+
+.usecase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+.usecase-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.usecase-card .uc-ico { font-size: 1.8rem; margin-bottom: 10px; }
+.usecase-card .uc-title { font-size: 0.9rem; font-weight: bold; color: #fff; margin-bottom: 6px; }
+.usecase-card .uc-desc { font-size: 0.78rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
 
 .flow-list { list-style: none; padding: 0; margin: 0; counter-reset: flow; }
 .flow-list li {
@@ -310,7 +371,10 @@
 #cta-section h2 { font-size: clamp(1.4rem, 3.5vw, 2rem); margin-bottom: 16px; color: #fff; }
 #cta-section .lead { font-size: 0.95rem; color: rgba(255,255,255,0.7); line-height: 1.9; margin-bottom: 10px; }
 #cta-section .note { font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-bottom: 36px; }
-.cta-btns { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 24px; }
+.cta-btns { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 16px; }
+.cta-reassure { list-style: none; padding: 0; margin: 0 0 24px; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: center; }
+.cta-reassure li { font-size: 0.82rem; color: rgba(255,255,255,0.6); }
+.cta-reassure li::before { content: '\2713 '; color: #4ade80; font-weight: bold; }
 .cta-limit {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 0.82rem; font-weight: bold; color: #fbbf24;
@@ -323,6 +387,9 @@
   .two-col { grid-template-columns: 1fr; }
   .reason-item { flex-direction: column; gap: 10px; }
   .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  .usecase-grid { grid-template-columns: 1fr; }
+  .cost-compare { grid-template-columns: 1fr; }
+  .cost-arrow { transform: rotate(90deg); }
   #cta-section { padding: 40px 24px; }
   .compare-table { font-size: 0.8rem; }
   .compare-table th, .compare-table td { padding: 10px 8px; }
@@ -344,11 +411,12 @@
     <nav>
       <ul>
         <li><a href="#about">OpenClawとは</a></li>
-        <li><a href="#problems">お悩み</a></li>
-        <li><a href="#compare">他社比較</a></li>
+        <li><a href="#usecase">向いている業務</a></li>
+        <li><a href="#compare">料金比較</a></li>
         <li><a href="#service">サービス内容</a></li>
+        <li><a href="#case">導入事例</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li class="btn"><a href="#cta-section">無料で相談する</a></li>
+        <li class="btn"><a href="#cta-section">OpenClaw導入を相談する</a></li>
       </ul>
     </nav>
   </div>
@@ -357,32 +425,76 @@
 <!-- ヒーロー -->
 <aside>
   <section id="hero">
-    <div class="hero-label">OpenClaw 導入セッティング代行</div>
-    <h2 class="hero-title">OpenClawの導入を、<br><em>まるごと代行。</em></h2>
-    <p class="hero-sub">OpenClawのインストールからSOUL設計、チャネル連携まで。<br>非エンジニアの実運用経験をもとに、あなたのMac miniやVPSにセットアップします。</p>
-    <div class="hero-btns">
-      <a href="#cta-section" class="btn-hero-main">無料で相談する →</a>
-      <a href="https://note.com/odamaru_/n/n601ee6bda7cc" target="_blank" rel="noopener" class="btn-hero-sub">導入実績を読む</a>
+    <div class="hero-label">OpenClaw 導入・セッティング代行</div>
+    <h2 class="hero-title">OpenClawの導入を、<br>非エンジニア向けに<em>まるごと代行。</em></h2>
+    <p class="hero-sub">インストールからSOUL設計（AIの人格・行動ルール）、X・メールなどのチャネル連携まで。<br>Mac miniやVPSに、業務で使えるOpenClaw環境をセットアップします。</p>
+    <div class="hero-badges">
+      <span class="hero-badge">技術設定はおまかせ</span>
+      <span class="hero-badge">SOUL設計込み</span>
+      <span class="hero-badge">Mac mini / VPS対応</span>
+      <span class="hero-badge">実運用ベースで設計</span>
     </div>
-    <div class="hero-limit">⚡ 現在【限定5名】受付中</div>
+    <div class="hero-btns">
+      <a href="#cta-section" class="btn-hero-main">OpenClaw導入を無料で相談する &rarr;</a>
+      <a href="https://note.com/odamaru_/n/n601ee6bda7cc" target="_blank" rel="noopener" class="btn-hero-sub">実際の導入事例を見る</a>
+    </div>
+    <div class="hero-limit">&rlm;&#9889; 現在【限定5名】受付中 &mdash; 初期設計を丁寧に行うための人数制限です</div>
   </section>
 </aside>
 
 <main>
 
-  <!-- OpenClawとは -->
+  <!-- OpenClaw（オープンクロー）とは -->
   <section id="about">
-    <h2>OpenClawとは？</h2>
+    <h2>OpenClaw（オープンクロー）とは？ &mdash; ChatGPTとの違い</h2>
     <div class="two-col">
       <div>
-        <p>OpenClawは、オープンソースの自律型AIエージェントです。ChatGPTのように「質問に答える」だけでなく、PCのファイル操作、ブラウザの自動操作、SNS投稿、メール対応、定時タスクの実行など、<strong>実際の業務を自律的に実行</strong>します。</p>
+        <p>OpenClaw（オープンクロー）は、オープンソースの<strong>自律型AIエージェント</strong>です。ChatGPTのように「質問に答える」だけでなく、PCのファイル操作、ブラウザの自動操作、SNS投稿、メール対応、定時タスクの実行など、<strong>実際の業務を自律的に実行</strong>します。</p>
         <p>すべての処理はあなたのMac miniやVPS上で動作するため、データが外部に送信されることはありません。オープンソースで、月額サブスク不要。自分の環境に資産として残ります。</p>
         <p>GitHubでのStar数は30万を超え、2026年に入り法人・個人を問わず導入が急増しています。</p>
       </div>
       <div class="bg2">
         <h3 style="margin-top:0;">ChatGPTとOpenClawの違い</h3>
         <p><strong>ChatGPT = 相談相手。</strong><br>質問に答えてくれるが、実際の操作はできない。「Xに投稿して」と言っても投稿してくれない。</p>
-        <p><strong>OpenClaw = 実務担当。</strong><br>Xに投稿する、メールを確認して返信案を作る、ファイルを整理する。指示するだけでなく、実行までやるAIです。</p>
+        <p><strong>OpenClaw = 実務担当。</strong><br>Xに投稿する、メールを確認して返信案を作る、ファイルを整理する。指示するだけでなく、<strong>実行までやるAI</strong>です。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OpenClawが向いている業務 -->
+  <section id="usecase">
+    <h2 class="c">OpenClawが向いている業務</h2>
+    <p style="text-align:center; color:rgba(255,255,255,0.65); margin-bottom:2rem;">「社員を雇うほどではないけれど、手が回らない」定型業務に向いています。</p>
+    <div class="usecase-grid">
+      <div class="usecase-card">
+        <div class="uc-ico">&#128172;</div>
+        <div class="uc-title">X投稿・SNS運用</div>
+        <div class="uc-desc">下書き作成から投稿まで24時間自動で運用</div>
+      </div>
+      <div class="usecase-card">
+        <div class="uc-ico">&#9993;</div>
+        <div class="uc-title">メールの一次返信</div>
+        <div class="uc-desc">定型的な問い合わせへの返信案を自動作成</div>
+      </div>
+      <div class="usecase-card">
+        <div class="uc-ico">&#128269;</div>
+        <div class="uc-title">情報収集・リサーチ</div>
+        <div class="uc-desc">Web検索・競合調査・下書き作成を自動化</div>
+      </div>
+      <div class="usecase-card">
+        <div class="uc-ico">&#128193;</div>
+        <div class="uc-title">ファイル整理</div>
+        <div class="uc-desc">定期的なデータ整理・フォルダ管理を自律実行</div>
+      </div>
+      <div class="usecase-card">
+        <div class="uc-ico">&#128101;</div>
+        <div class="uc-title">クラウドソーシング</div>
+        <div class="uc-desc">案件検索・応募文面の作成を自動化</div>
+      </div>
+      <div class="usecase-card">
+        <div class="uc-ico">&#128339;</div>
+        <div class="uc-title">定時タスク</div>
+        <div class="uc-desc">日報送信・レポート作成など、毎日の定型業務</div>
       </div>
     </div>
   </section>
@@ -390,54 +502,54 @@
   <!-- こんなお悩みありませんか？ -->
   <section id="problems">
     <div class="bg1">
-      <h2 class="c">OpenClawの導入で、こんなお悩みありませんか？</h2>
+      <h2 class="c">OpenClawの導入セットアップで、こんなお悩みありませんか？</h2>
       <p style="text-align:center; color:rgba(255,255,255,0.65); margin-bottom:2rem;">非エンジニアとして自力で導入した経験があるので、このハードル全部わかります。</p>
       <div class="trouble-grid">
         <div class="trouble-item">
-          <span class="ico">💻</span>
+          <span class="ico">&#128187;</span>
           <span>OpenClawを入れたいけど、ターミナル操作やNode.jsなど技術的なハードルが高い</span>
         </div>
         <div class="trouble-item">
-          <span class="ico">📦</span>
+          <span class="ico">&#128230;</span>
           <span>Mac miniは買ったけど、開梱してそこで止まっている</span>
         </div>
         <div class="trouble-item">
-          <span class="ico">🧩</span>
+          <span class="ico">&#129513;</span>
           <span>セットアップできたとしても「AIに何をやらせるか」の設計ができない</span>
         </div>
         <div class="trouble-item">
-          <span class="ico">⏰</span>
+          <span class="ico">&#9200;</span>
           <span>自分で導入すると数日かかりそう。本業の時間を使いたくない</span>
         </div>
         <div class="trouble-item">
-          <span class="ico">🔒</span>
+          <span class="ico">&#128274;</span>
           <span>セキュリティ設定やアカウントのBAN対策に不安がある</span>
         </div>
         <div class="trouble-item">
-          <span class="ico">🤔</span>
+          <span class="ico">&#129300;</span>
           <span>導入業者を探したが、法人向けの高額サービスしか見つからない</span>
         </div>
       </div>
-      <div class="resolve-bar">アイセットなら、導入からSOUL設計まで、まとめてお任せいただけます。</div>
+      <div class="resolve-bar">アイセットなら、OpenClawの導入からSOUL設計（AIの人格・行動ルール）まで、まとめてお任せいただけます。</div>
     </div>
   </section>
 
   <!-- 選ばれる理由 -->
   <section id="reasons">
     <div class="bg1">
-      <h2 class="c">アイセットが選ばれる4つの理由</h2>
+      <h2 class="c">OpenClaw導入代行でアイセットが選ばれる4つの理由</h2>
       <div class="reason-list">
         <div class="reason-item">
           <div class="reason-num">1</div>
           <div class="reason-body">
             <h4>非エンジニアだからこそ、つまずくポイントを全部知っている</h4>
-            <p>「ターミナルって何？」レベルから自力で導入した経験があります。SSHの接続、Node.jsの導入、ゲートウェイの設定——あなたが不安に思う場所を先回りして対応できます。</p>
+            <p>「ターミナルって何？」レベルから自力で導入した経験があります。SSHの接続、Node.jsの導入、ゲートウェイの設定&mdash;&mdash;あなたが不安に思う場所を先回りして対応できます。</p>
           </div>
         </div>
         <div class="reason-item">
           <div class="reason-num">2</div>
           <div class="reason-body">
-            <h4>セットアップだけでなく、SOUL（AIの人格・行動ルール）の設計までやる</h4>
+            <h4>インストールだけでなく、SOUL設計（AIの人格・行動ルール）までやる</h4>
             <p>技術的なインストールは手段にすぎません。自律型AIで本当に難しいのは「AIに何をやらせるか」「どう判断させるか」の設計です。事業経験をもとに、あなたのビジネスに合ったSOUL設計を一緒に作ります。</p>
           </div>
         </div>
@@ -445,7 +557,7 @@
           <div class="reason-num">3</div>
           <div class="reason-body">
             <h4>実戦で運用している人間が対応する</h4>
-            <p>AI社長「じん」のSOUL設計（791行）、BAN回避設計、クラウドソーシングの自動受注——机上の知識ではなく、今も動いている環境を持っています。最新の実戦ノウハウをそのまま活かします。</p>
+            <p>AI社長「じん」のSOUL設計（791行）、BAN回避設計、クラウドソーシングの自動受注&mdash;&mdash;机上の知識ではなく、今も動いている環境を持っています。最新の実戦ノウハウをそのまま活かします。</p>
           </div>
         </div>
         <div class="reason-item">
@@ -461,7 +573,7 @@
 
   <!-- できること / やらないこと -->
   <section>
-    <h2>OpenClaw導入でできること / やらないこと</h2>
+    <h2>OpenClaw導入セッティングでできること / やらないこと</h2>
     <p style="text-align:center; color:rgba(255,255,255,0.65); margin-bottom:2rem;">安全のために「やらないこと」を明確にしています。</p>
     <div class="two-col">
       <div>
@@ -498,13 +610,13 @@
   <section id="compare">
     <div class="bg1">
       <h2 class="c">OpenClaw導入代行の料金比較</h2>
-      <p style="text-align:center; color:rgba(255,255,255,0.65); margin-bottom:2rem;">法人向けOpenClaw導入サービスとの比較です（2026年3月時点）。</p>
+      <p style="text-align:center; color:rgba(255,255,255,0.65); margin-bottom:2rem;">OpenClaw導入サービスの一般的な相場との比較です（2026年3月時点）。</p>
       <table class="compare-table">
         <thead>
           <tr>
             <th></th>
-            <th>A社（エンタープライズ向け）</th>
-            <th>B社（法人向け構築代行）</th>
+            <th>エンタープライズ向け<br>導入サービスの相場</th>
+            <th>法人向け<br>構築代行の相場</th>
             <th class="highlight">アイセット</th>
           </tr>
         </thead>
@@ -553,7 +665,23 @@
 
   <!-- サービス内容と料金 -->
   <section id="service">
-    <h2>OpenClaw導入セッティングの料金</h2>
+    <h2>OpenClaw導入セッティングの料金 &mdash; 社員採用と比較</h2>
+
+    <!-- コスト比較 -->
+    <div class="cost-compare">
+      <div class="cost-card">
+        <div class="cost-label">社員を1人採用した場合</div>
+        <div class="cost-num">年間 約360万円</div>
+        <div class="cost-detail">月額30万円 &times; 12ヶ月<br>（給与・社会保険・採用コスト含む）</div>
+      </div>
+      <div class="cost-arrow">&rarr;</div>
+      <div class="cost-card highlight">
+        <div class="cost-label">OpenClaw導入の場合</div>
+        <div class="cost-num">198,000円（税込）</div>
+        <div class="cost-detail">買い切り。24時間365日稼働。<br>導入1年目だけで約340万円のコスト削減。</div>
+      </div>
+    </div>
+
     <div class="two-col">
       <div>
         <h3>初期セッティングに含まれるもの</h3>
@@ -575,15 +703,16 @@
         <div class="lbl">料金（初期セッティング）</div>
         <p class="main-txt">198,000円（税込）</p>
         <p class="sub-txt">ヒアリングからSOUL設計、セットアップ、チャネル連携、動作確認、2週間のサポートまで含めた料金です。ヒアリング後に正式なお見積もりをお出しします。</p>
+        <p class="sub-txt" style="margin-top:12px;">社員を1人採用すれば年間約360万円。OpenClawなら198,000円の買い切りで、24時間365日休まず働くAI従業員を導入できます。非エンジニアが独学で数十時間かけやすい工程を、実運用経験をもとに短縮します。</p>
         <p class="note">月額運用支援プラン（SOUL改善・運用点検・設定修正等）もあります。詳細はお問い合わせ時にご案内します。</p>
       </div>
     </div>
   </section>
 
-  <!-- 導入実績 -->
-  <section>
+  <!-- 導入事例 -->
+  <section id="case">
     <div class="bg2">
-      <h2 class="c">導入実績：AI社長「じん」</h2>
+      <h2 class="c">OpenClaw導入事例：AI社長「じん」ができるまで</h2>
       <p style="text-align:center; color:rgba(255,255,255,0.75); margin-bottom:1.5rem;">運営者おだまる自身が、非エンジニアとしてMac miniにOpenClawを導入し、AI社長「じん」（<a href="https://x.com/jin_ai_ceo" target="_blank" rel="noopener" style="color:#7aa4ff;">@jin_ai_ceo</a>）を立ち上げ・運用しています。</p>
       <div class="stat-grid">
         <div class="stat-card">
@@ -603,15 +732,22 @@
           <div class="label">段階的自律化でリスク回避</div>
         </div>
       </div>
-      <p style="text-align:center; font-size:0.88rem; color:rgba(255,255,255,0.6); line-height:1.8;">X（旧Twitter）自動投稿、クラウドソーシング自動受注、Telegram経由の日報・承認フローなど、実際に動いている環境をもとにサポートします。</p>
+      <div style="margin-top:1.5rem;">
+        <h3 style="color:#fff; margin-bottom:0.8rem;">導入前の課題</h3>
+        <p style="font-size:0.88rem; color:rgba(255,255,255,0.65); line-height:1.85;">「AI社長」としてXで24時間発信するアカウントを作りたかったが、OpenClawの導入は非エンジニアにはハードルが高く、ターミナル操作・SSH接続・Node.js環境構築に何日もかかった。技術的なセットアップよりも、「AIに何をどう判断させるか」の設計が本当に難しかった。</p>
+        <h3 style="color:#fff; margin-top:1.2rem; margin-bottom:0.8rem;">SOUL設計で工夫したこと</h3>
+        <p style="font-size:0.88rem; color:rgba(255,255,255,0.65); line-height:1.85;">791行のSOULには、人格（口調・価値観・判断基準）だけでなく、BAN回避のための投稿ルール、承認フロー（重要な行動はTelegramで人間に確認を取る）、段階的に自律度を上げる仕組みを設計。「完全自律」ではなく「段階的自律化」がリスク回避の鍵。</p>
+        <h3 style="color:#fff; margin-top:1.2rem; margin-bottom:0.8rem;">導入後の成果</h3>
+        <p style="font-size:0.88rem; color:rgba(255,255,255,0.65); line-height:1.85;">X自動投稿、クラウドソーシング自動受注、Telegram経由の日報・承認フローが稼働中。2体のAI（じん + らな）を同時運用し、BAN 0を維持。この実運用で得たノウハウをそのまま、お客様の導入に活かしています。</p>
+      </div>
     </div>
   </section>
 
   <!-- ご利用の流れ -->
   <section id="flow">
     <div class="bg1">
-      <h2 class="c">OpenClaw導入の流れ</h2>
-      <p style="text-align:center; color:rgba(255,255,255,0.65); margin-bottom:2rem;">申し込みから納品まで。すべてチャット・メールで完結します。</p>
+      <h2 class="c">OpenClaw導入の流れ &mdash; 申し込みから納品まで</h2>
+      <p style="text-align:center; color:rgba(255,255,255,0.65); margin-bottom:2rem;">すべてチャット・メールで完結します。通話は原則不要です。</p>
       <ol class="flow-list">
         <li>
           <div class="flow-num">1</div>
@@ -654,30 +790,30 @@
 
   <!-- FAQ -->
   <section id="faq">
-    <h2>よくある質問</h2>
+    <h2>OpenClaw導入でよくある質問</h2>
     <dl class="faq-list">
       <div class="faq-item">
-        <dt>OpenClawとは何ですか？</dt>
+        <dt>OpenClaw（オープンクロー）とは何ですか？</dt>
         <dd>オープンソースの自律型AIエージェントです。あなたのPC（Mac mini等）やVPS上で動作し、SNS投稿、メール対応、ファイル操作、ブラウザ自動化などを自律的に実行します。ChatGPTと違い、「実際の操作」まで行うのが特徴です。</dd>
       </div>
       <div class="faq-item">
-        <dt>セットアップにどれくらい時間がかかりますか？</dt>
+        <dt>OpenClawのセットアップにどれくらい時間がかかりますか？</dt>
         <dd>ヒアリングからセットアップ完了まで、通常1〜2週間程度です（やり取りのペースにより前後します）。技術的な作業自体は数時間で完了しますが、SOUL設計のためのヒアリングと調整に時間をいただきます。</dd>
       </div>
       <div class="faq-item">
-        <dt>Mac miniは必要ですか？</dt>
+        <dt>OpenClawの導入にMac miniは必要ですか？</dt>
         <dd>Mac miniは24時間常時稼働に最適ですが、必須ではありません。MacBookやVPS（Ubuntu）でもOpenClawは動作します。ご予算や用途に応じて最適な環境をご提案します。</dd>
       </div>
       <div class="faq-item">
-        <dt>Windowsでも使えますか？</dt>
+        <dt>OpenClawはWindowsでも使えますか？</dt>
         <dd>現時点ではmacOSまたはLinux（VPS）のみ対応しています。Windowsへの対応は将来的に検討しますが、今のところ対象外です。</dd>
       </div>
       <div class="faq-item">
-        <dt>非エンジニアでも運用できますか？</dt>
+        <dt>非エンジニアでもOpenClawを運用できますか？</dt>
         <dd>はい。セットアップと初期設定はこちらで行い、日常の運用はチャットツール（Telegram等）からAIに指示を出すだけです。使い方のレクチャーも含まれています。</dd>
       </div>
       <div class="faq-item">
-        <dt>Genspark Clawとの違いは何ですか？</dt>
+        <dt>OpenClawとGenspark Clawの違いは何ですか？</dt>
         <dd>Genspark ClawはOpenClawのクラウド版（マネージド版）です。セットアップが簡単でMac不要ですが、月額サブスクが必要で、カスタマイズに上限があります。OpenClawは自分の環境で自由にカスタマイズでき、月額サブスクなしで運用できます。どちらが合うかはお問い合わせ時にご相談いただけます。</dd>
       </div>
       <div class="faq-item">
@@ -685,8 +821,12 @@
         <dd>いいえ、任意です。初期セットアップのみでも納品可能です。ただし、AIの運用は継続的な改善が効果を高めるため、運用支援プランもご用意しています。詳細はお問い合わせください。</dd>
       </div>
       <div class="faq-item">
-        <dt>データのセキュリティは大丈夫ですか？</dt>
+        <dt>OpenClawのデータセキュリティは大丈夫ですか？</dt>
         <dd>OpenClawはすべての処理がお客様の環境（Mac mini / VPS）上で完結するため、データが外部に送信されることはありません。お客様の認証情報（APIキー等）は当方では受け取らず、保存もしません。</dd>
+      </div>
+      <div class="faq-item">
+        <dt>OpenClawを導入すると、社員を雇うのと比べてどれくらいお得ですか？</dt>
+        <dd>社員を1人採用すると、給与・社会保険・採用コストを含め年間約360万円が発生します。OpenClawなら198,000円の買い切りで、24時間365日休まず稼働するAI従業員を導入できます。導入1年目だけで約340万円のコスト削減につながります。</dd>
       </div>
     </dl>
   </section>
@@ -695,13 +835,18 @@
   <section>
     <div id="cta-section">
       <h2>OpenClawの導入、まずはお気軽にご相談ください</h2>
-      <p class="lead">ヒアリングの結果、合わないと判断した場合はお断りすることもあります。<br>まずはお話を聞かせてください。</p>
+      <p class="lead">「自分で導入する時間がない」「何をどう設計すればいいか分からない」方へ。<br>実運用経験をもとに、使える状態まで整えます。</p>
       <p class="note">やり取りはすべてチャット・メールで行います。通話は原則対応しておりません。</p>
       <div class="cta-btns">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzG1Up47obPguJKSR4jeZd723eKab-r7ptVullvip6UGj_sQ/viewform" target="_blank" rel="noopener" class="btn-hero-main">お問い合わせフォーム →</a>
-        <a href="https://x.com/odamaruu" target="_blank" rel="noopener" class="btn-hero-sub">X（旧Twitter）でDMする</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzG1Up47obPguJKSR4jeZd723eKab-r7ptVullvip6UGj_sQ/viewform" target="_blank" rel="noopener" class="btn-hero-main">OpenClaw導入を無料で相談する &rarr;</a>
+        <a href="https://x.com/odamaruu" target="_blank" rel="noopener" class="btn-hero-sub">Xで気軽に相談する</a>
       </div>
-      <div class="cta-limit">⚡ 現在【限定5名】で受付中</div>
+      <ul class="cta-reassure">
+        <li>相談だけでもOK</li>
+        <li>まだ申し込み前でも大丈夫</li>
+        <li>Mac mini / VPSどちらが向くかも整理します</li>
+      </ul>
+      <div class="cta-limit">&rlm;&#9889; 現在【限定5名】で受付中 &mdash; 初期設計を丁寧に行うための人数制限です</div>
     </div>
   </section>
 
